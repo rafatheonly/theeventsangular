@@ -1,0 +1,30 @@
+.fundo-rodape {
+    background-color: #1d1d1d;
+}
+
+.rodape {
+    padding: 50px 0px 40px 0px;
+}
+
+.rodape h6 {
+    color: #fff
+}
+
+.rodape p {
+    color: #999;
+    font-size: 14px;
+    line-height: 0.5mm
+}
+
+.fa-heart {
+    color: red
+}
+
+#link-criadores:link, #link-criadores:visited, #link-criadores:active {
+    color: #999;
+}
+
+#link-criadores:hover {
+    color: #999;
+    text-decoration: underline
+}
