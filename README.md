@@ -14,8 +14,11 @@ Tanto o Angular CLI quanto o projeto gerado possuem dependências que requerem o
 
 ## Índice
 
-* [Clonar](#clonar);
-* [Instalação](#instalação);
+* [Clonar](#clonar)
+* [Instalação](#instalação)
+* [Uso](#uso)
+* [Documentação](#documentação)
+* [Licença](#licença)
 
 ## Clonar
 
@@ -43,10 +46,30 @@ ou você pode baixar o projeto (*download*):
 
 ## Instalação
 
-Após o projeto ter sido clonado/baixado devemos navegar até a pasta onde o mesmo foi baixado usando o terminal do seu sistema operacional e executar o seguinte comando:
+**ANTES DE INSTALAR:** leia os [pré-requisitos](#pre-requisitos).
+
+Após o projeto ter sido [clonado/baixado](#clonar) deve-se navegar até a pasta onde o mesmo foi baixado usando o terminal do sistema operacional e executar o seguinte comando:
 
 ```bash
 npm install
 ```
 
-O sistma irá baixar as dependências necessárias para o funcionamento do projeto *web*.
+Com o comando acima, o sistema irá baixar as dependências necessárias para o funcionamento do projeto *web*.
+
+## Uso
+
+Para usar deve-se estar dentro da pasta do projeto e executar o seguinte comando usando o terminal (da IDE ou terminal nativo do sistema operacional):
+
+```bash
+ng serve
+```
+
+Se tudo ocorrer bem, aparecerá uma mensagem de sucesso contendo o seguinte endereço: `http://localhost:4200/`. No navegador de sua preferência digite esse endereço e verifique se *homepage* se parece com essa aqui: <https://theeventsangular.herokuapp.com/>. Caso não se pareça verifique os passos anteriores do contrario quer dizer que ocorreu tudo bem.
+
+## Documentação
+
+A documentação com maior clareza se encontra na [wiki](https://github.com/rafatheonly/theeventsangular/wiki) desse repositório.
+
+## Licença
+
+A aplicação conta com a seguinte licença de uso: [MIT](https://opensource.org/licenses/MIT).
