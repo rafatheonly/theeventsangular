@@ -6,7 +6,7 @@ O The Events é um *software* gratuito, completamente codificado em **Angular** 
 
 Esse projeto faz parte da aula 01 (atividade 01), que começou a ser desenvolvido como parte da avaliação da disciplina de Algortimos e Programção III do 3° semestre da Faculdade de Tecnologia Senac Pelotas – RS e pertence a dupla: [Michel Luz](https://github.com/mortalisnoia) e [Rafael Calearo](https://github.com/rafatheonly).
 
-Sinta-se livre para [baixar] ou [clonar] o código-fonte:
+Sinta-se livre para [baixar](#clonar) ou [clonar](#clonar) o código-fonte:
 
 ## Pré-requisitos
 
@@ -14,10 +14,10 @@ Tanto o Angular CLI quanto o projeto gerado possuem dependências que requerem o
 
 ## Índice
 
-* [Clonar](#baixar/clonar);
+* [Clonar](#clonar);
 * [Instalação](#instalação);
 
-## Baixar/Clonar
+## Clonar
 
 Para saber como usar a ferramenta Git acesse o *site* do Git: [](https://git-scm.com/doc). Caso já saiba use os comandos abaixo:
 
@@ -35,8 +35,8 @@ ou
 $ git clone https://github.com/rafatheonly/theeventsangular.git
 ```
 
-ou
+ou você pode baixar (*download*) o projeto:
 
-**Downlaod ZIP**
+**Baixar ZIP**
 
 [Aqui](https://github.com/rafatheonly/theeventsangular/archive/master.zip)
