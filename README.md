@@ -10,7 +10,7 @@ Sinta-se livre para [clonar](#clonar) ou [baixar](#clonar) o código-fonte:
 
 ## Pré-requisitos
 
-Tanto o Angular CLI quanto o projeto gerado possuem dependências que requerem o Node 6.9.0 ou superior, junto com o NPM 3 ou superior.
+Tanto o Angular CLI quanto o projeto gerado possuem dependências que requerem o Node 8.11.1 ou superior, junto com o NPM 5.6.0 ou superior.
 
 ## Índice
 
