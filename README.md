@@ -10,7 +10,7 @@ Sinta-se livre para [clonar](#clonar) ou [baixar](#clonar) o código-fonte:
 
 ## Pré-requisitos
 
-Tanto o Angular CLI quanto o projeto gerado possuem dependências que requerem o Node 8.11.1 ou superior, junto com o NPM 5.6.0 ou superior.
+Tanto o [Angular CLI](https://cli.angular.io/) quanto o projeto gerado possuem dependências que requerem o [Node 8.11.1](https://nodejs.org/en/) ou superior, junto com o [NPM 5.6.0](https://www.npmjs.com/) ou superior. Aqui vale lembrar que ao instalar o Node em seu sistema operacional o mesmo já traz o NPM instalado junto. Nesse repositório não será mostrado como instalar o Node e nem o Angular CLI, fique a vontade em clicar nos *links* fornecidos anteriormente para obter a documentação dos mesmos junto aos seus *sites*. **A ideia principal é mostrar como rodar o sistema aqui hospedado!**
 
 ## Índice
 
