@@ -1,4 +1,4 @@
-![Logo](https://image.ibb.co/hk8X9c/projeto_02.png)
+![Logo] (https://image.ibb.co/hk8X9c/projeto_02.png)
 
 # The Events - Mussum
 
