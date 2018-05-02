@@ -19,7 +19,7 @@ Tanto o Angular CLI quanto o projeto gerado possuem dependências que requerem o
 
 ## Clonar
 
-Para saber como usar a ferramenta Git acesse o *site* do Git: [](https://git-scm.com/doc). Caso já saiba use os comandos abaixo:
+Para saber como usar a ferramenta Git acesse o *site* do Git: [](https://git-scm.com/doc). Caso já saiba como fazer use os comandos abaixo:
 
 **Com SSH:**
 
@@ -39,4 +39,4 @@ ou você pode baixar (*download*) o projeto:
 
 **Baixar ZIP**
 
-[Aqui](https://github.com/rafatheonly/theeventsangular/archive/master.zip)
+[Aqui](https://github.com/rafatheonly/theeventsangular/archive/master.zip)!
