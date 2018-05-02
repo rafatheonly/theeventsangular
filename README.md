@@ -2,7 +2,7 @@
 
 # The Events – MR
 
-O The Events – MR é um *software* gratuito, completamente codificado em **Angular** (*front-end*) que conta com alguns modulos instalados nele: [Angular CLI](https://cli.angular.io/), [Bootstrap 4](https://getbootstrap.com/), [Lightbox](http://lokeshdhakar.com/projects/lightbox2/) e outros... Embora ainda seja um projeto bastante jovem, ele oferece uma visão gigante de uma aplicação simples usando essas tecnologias e em breve o mesmo será integrado a outro projeto [API Restfull com Spring Boot](http://teste.com.br) (*back-end*) que faz parte do funcionamento do sistema.
+O The Events – MR é um *software* gratuito, completamente codificado em **Angular** (*front-end*) que conta com alguns modulos instalados nele: [Angular CLI](https://cli.angular.io/), [Bootstrap 4](https://getbootstrap.com/), [Lightbox](http://lokeshdhakar.com/projects/lightbox2/) e outros... Embora ainda seja um projeto bastante jovem, ele oferece uma visão gigante de uma aplicação simples usando essas tecnologias e em breve o mesmo será integrado a outro projeto [API RESTful com Spring Boot](http://teste.com.br) (*back-end*) que faz parte do funcionamento do sistema.
 
 The Events – MR faz parte da aula 01 (atividade 01), que começou a ser desenvolvido como parte da avaliação da disciplina de Algortimos e Programção III do 3° semestre da Faculdade de Tecnologia Senac Pelotas – RS e pertence a dupla: [Michel Luz](https://github.com/mortalisnoia) e [Rafael Calearo](https://github.com/rafatheonly). O projeto conta também com a orientação do prof. [Angelo Luz](https://github.com/angelogluz) e o andamento pode ser acompanhado (visto) no repositório do **Heroku**: <https://theeventsangular.herokuapp.com/>. 
 
