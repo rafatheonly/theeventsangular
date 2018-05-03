@@ -46,7 +46,7 @@ ou você pode baixar o projeto (*download*):
 
 ## Instalação
 
-**ANTES DE INSTALAR:** leia os [pré-requisitos](#pre-requisitos).
+**ANTES DE INSTALAR:** leia os [pré-requisitos](#pré-requisitos).
 
 Após o projeto ter sido [clonado/baixado](#clonar) deve-se navegar até a pasta onde o mesmo foi baixado usando o terminal do sistema operacional ou da IDE e executar o seguinte comando:
 
