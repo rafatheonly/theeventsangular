@@ -68,7 +68,7 @@ Se tudo ocorrer bem, aparecerá uma mensagem de sucesso contendo o seguinte ende
 
 ## Documentação
 
-A documentação com maior clareza se encontra na [wiki](https://github.com/rafatheonly/theeventsangular/wiki) desse repositório.
+A documentação com maior clareza se encontra na **[wiki](https://github.com/rafatheonly/theeventsangular/wiki)** desse repositório.
 
 ## Licença
 
