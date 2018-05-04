@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventoService } from '../evento/evento.service';
 
 @Component({
   selector: 'app-content',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  eventos = [];
+
+  constructor(private eventoService: EventoService) { }
 
   ngOnInit() {
+    this.consultar();
   }
 
+  consultar() {
+    this.eventoService.listar().subscribe(dados => this.eventos = dados);
+  }
 }

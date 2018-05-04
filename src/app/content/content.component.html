@@ -29,10 +29,39 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
+        <!--<div class="card-deck justify-content-center">
+          <div class="card borda-card" *ngFor="let evento of eventos | slice:0:3; index as i">
+            <a href="/assets/img/2.jpg" style="background-image: url('../../assets/img/2.jpg')" class="imagem-card" data-lightbox="2.jpg"></a>
+            <div class="card-body">
+              <p>
+                <b>{{ evento.titulo }}</b>
+              </p>
+              <p class="data-card">{{ evento.data }}</p>
+              <p>{{ evento.descricao }}</p>
+              <a href="#" class="btn-mais-card">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="card-deck justify-content-center">
+          <div class="card borda-card" *ngFor="let evento of eventos | slice:3:6; index as i">
+            <a href="/assets/img/2.jpg" style="background-image: url('../../assets/img/2.jpg')" class="imagem-card" data-lightbox="2.jpg"></a>
+            <div class="card-body">
+              <p>
+                <b>{{ evento.titulo }}</b>
+              </p>
+              <p class="data-card">{{ evento.data }}</p>
+              <p>{{ evento.descricao }}</p>
+              <a href="#" class="btn-mais-card">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>-->
         <div class="card-deck justify-content-center">
           <div class="card borda-card">
             <a href="/assets/img/1.jpg" style="background-image: url('../../assets/img/1.jpg')" class="imagem-card" data-lightbox="1.jpg">
-              <!--<img src="/assets/img/teste.jpg" style="display: none">-->
+              <img src="/assets/img/teste.jpg" style="display: none">
             </a>
             <div class="card-body">
               <p>
@@ -66,12 +95,13 @@
             </div>
           </div>
         </div>
-        <a href="#" id="btn-mais-posts">
-          <div>
-            <strong>VEJA</strong> <i class="fa fa-plus"></i>
-          </div>
-        </a>
+        <div class="col-lg-12">
+          <a href="#" id="btn-mais-posts">
+            <div>
+              <strong>VEJA MAIS</strong>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
