@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 export class EventoService {
 
   //eventosUrl = 'http://localhost:8080/eventos';  
-  eventosUrl = 'ec2-54-204-39-46.compute-1.amazonaws.com/eventos';
+  eventosUrl = 'https://ec2-54-204-39-46.compute-1.amazonaws.com/eventos';
 
   constructor(private http: HttpClient) { }
 
