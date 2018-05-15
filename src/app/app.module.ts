@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventoService } from './evento/evento.service';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -14,11 +17,13 @@ import { EventoService } from './evento/evento.service';
     AppComponent,
     NavbarComponent,
     ContentComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [
     EventoService
