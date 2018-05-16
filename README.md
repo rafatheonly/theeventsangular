@@ -6,6 +6,8 @@ O The Events – MR é um *software* gratuito, completamente codificado em **Ang
 
 The Events – MR faz parte da aula 01 (atividade 01), que começou a ser desenvolvido como parte da avaliação da disciplina de Algortimos e Programação III do 3° semestre da Faculdade de Tecnologia Senac Pelotas – RS e pertence a dupla: [Michel Luz](https://github.com/mortalisnoia) e [Rafael Calearo](https://github.com/rafatheonly). O projeto conta também com a orientação do prof. [Angelo Luz](https://github.com/angelogluz) e o andamento pode ser acompanhado (visto) no repositório do **Heroku**: <https://theeventsangular.herokuapp.com/>. 
 
+**Situação atual do projeto:** em construção 🚧.
+
 Sinta-se livre para [clonar](#clonar) ou [baixar](#clonar) o código-fonte:
 
 ## Pré-requisitos
