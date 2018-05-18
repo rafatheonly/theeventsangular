@@ -1,9 +1,15 @@
-.fundo-rodape {
-    background-color: #1d1d1d
+.rodape {
+    position: absolute;
+    display: table;
+    bottom: -140px;
+    width: 100%;
+    height: 140px;
+    background-color: #1d1d1d;
 }
 
-.rodape {
-    padding: 50px 0px 40px 0px;
+.rodape div {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .rodape h6 {
@@ -16,7 +22,7 @@
     line-height: 0.5mm
 }
 
-.fa-heart {
+.rodape .fa-heart {
     color: red
 }
 

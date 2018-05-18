@@ -1,20 +1,32 @@
 .fundo-container {
-    padding-top: 120px;
+    padding: 150px 0px 150px 0px;
     background-image: url('../../assets/img/fundo-login.jpg');
-    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100vh;
     background-attachment: fixed;
     color: #fff
 }
 
-form {
-    margin-top: 20px;
+.fundo-container h2 {
+    padding-top: 30px
 }
+
+.fundo-container form {
+    margin-top: 30px;
+}
+
+.fundo-container a {
+    text-align: center
+}
+
+.fundo-container hr {
+    border-color: #fff
+}
+
+/** RETIRA O FOCO DOS INPUTS HTML **/
 
 /**input[type="text"], textarea, input[type="password"], input[type="email"] {
     outline: none;
@@ -22,23 +34,21 @@ form {
     border: 1px solid #ccc !important;
 }**/
 
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {   
-  border-color: rgba(62, 195, 145, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(62, 195, 145, 1);
-  outline: 0 none;
+/** TROCA A FOR DO FOCO DOS INPUTS HTML **/
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(62, 195, 145, 1) !important;
+    box-shadow: 0 0 0 0.2rem rgba(62, 195, 145, .43) !important;
+    outline: 0 none !important
+}
+
+.text-muted {
+    color: #fff !important;
+}
+
+.btn-form:hover {
+    background-color: #3ec391;
+    border-color: #3ec391;
+    color: #000;
+    transition-duration: 0.2s
 }
