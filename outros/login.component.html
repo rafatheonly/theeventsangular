@@ -1,0 +1,78 @@
+<div class="container-fluid fundo-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>
+                    <strong>Login</strong>
+                </h2>
+                <h4> Bem-vindo ao seu
+                    <em>login</em>. </h4>
+                <!--<form novalidate name="frmLogin">-->
+                <form [formGroup]="userForm">
+                    <div class="form-group">
+                        <input type="email" name="txtemail" id="nome" class="form-control form-control-sm" formControlName="nome">
+                    </div>
+                    <div *ngIf="userForm.get('nome').invalid && (userForm.get('nome').dirty || userForm.get('nome').touched)" class="alert alert-danger">
+                        O Nome é Obrigatório
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control form-control-sm" placeholder="Senha">
+                    </div>
+                    <div class="text-center">
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                    <hr>
+                    <button class="btn btn-light btn-sm btn-block btn-form" type="submit">
+                        <strong>Entrar</strong>
+                    </button>
+                    <!--<div>
+                        <fieldset>
+                            <legend>Formulario</legend>
+                            Valid: {{frmLogin.txtemail.$valid}}
+                        </fieldset>
+                    </div>
+                    {{email}}-->
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-7">
+                <h2>
+                    <strong>Cadastre-se</strong>
+                </h2>
+                <h4> É fácil, rápido e de graça. </h4>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control form-control-sm" placeholder="Senha" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <input type="text" class="form-control form-control-sm" placeholder="Endereço" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="number" class="form-control form-control-sm" placeholder="N°" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Bairro" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Cidade" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="UF" required>
+                    </div>
+                    <small class="form-text text-muted pull-lefht">
+                        <i class="fa fa-exclamation-triangle"></i> Nós nunca vamos compartilhar suas informações com ninguém!</small>
+                    <button class="btn btn-light btn-sm pull-right btn-form" type="submit">
+                        <strong>Cadastrar</strong>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>

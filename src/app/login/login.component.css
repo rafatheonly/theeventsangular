@@ -10,45 +10,62 @@
     color: #fff
 }
 
-.fundo-container h2 {
-    padding-top: 30px
+.centralizado {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0px 15px 0px
+}
+
+.padding-tela-login {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50);
+    padding: 30px 0px 30px 0px;
 }
 
 .fundo-container form {
-    margin-top: 30px;
+    padding: 0px 0px 40px 0px
 }
 
-.fundo-container a {
-    text-align: center
-}
-
-.fundo-container hr {
-    border-color: #fff
-}
-
-/** RETIRA O FOCO DOS INPUTS HTML **/
-
-/**input[type="text"], textarea, input[type="password"], input[type="email"] {
-    outline: none;
-    box-shadow: none !important;
-    border: 1px solid #ccc !important;
-}**/
-
-/** TROCA A FOR DO FOCO DOS INPUTS HTML **/
+/** TROCA A COR DO FOCO DOS INPUTS HTML OU RETIRA TUDO (FOCUS E HOVER) **/
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-    border-color: rgba(62, 195, 145, 1) !important;
+    /**border: 1px solid #ccc !important;
     box-shadow: 0 0 0 0.2rem rgba(62, 195, 145, .43) !important;
+    outline: none;**/
+    border-color: rgba(62, 195, 145, 1) !important;
+    box-shadow: 0 0 0 2px rgba(62, 195, 145, .90) !important;
     outline: 0 none !important
 }
 
 .text-muted {
     color: #fff !important;
+    margin: 0px 0px 0px 10px
 }
 
-.btn-form:hover {
+.text-muted .fa-exclamation-triangle {
+    color: #ffff00
+}
+
+.btn-formulario-login {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #000
+}
+
+.btn-formulario-login:hover {
+    border: 1px solid #3ec391;
     background-color: #3ec391;
-    border-color: #3ec391;
+    color: #000;
+    transition-duration: 0.2s
+}
+
+/** TROCA A COR E ESTILIZA O BTN PRIMENG **/
+
+.ui-widget-header .ui-button:enabled:hover, .ui-widget-header .ui-button:focus, .ui-widget-content .ui-button:enabled:hover, .ui-widget-content .ui-button:focus, .ui-widget.ui-button:enabled:hover, .ui-widget.ui-button:focus, .ui-button:enabled:hover, .ui-button:focus {
+    border: 1px solid #3ec391;
+    background: #3ec391;
+    outline: 0 none;
     color: #000;
     transition-duration: 0.2s
 }

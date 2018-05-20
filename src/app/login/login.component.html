@@ -1,37 +1,27 @@
 <div class="container-fluid fundo-container">
     <div class="container">
-        <div class="row">
+        <div class="row padding-tela-login">
             <div class="col-md-4">
                 <h2>
                     <strong>Login</strong>
                 </h2>
                 <h4> Bem-vindo ao seu
                     <em>login</em>. </h4>
-                <!--<form novalidate name="frmLogin">-->
-                <form [formGroup]="userForm">
-                    <div class="form-group">
-                        <input type="email" name="txtemail" id="nome" class="form-control form-control-sm" formControlName="nome">
+                <form #frm="ngForm" (ngSubmit)="logar(frm)">
+                    <div class="ui-g ui-fluid">
+                        <div class="ui-g-12">
+                            <input type="text" pInputText name="email" placeholder="E-mail" ngModel [required]="true">
+                        </div>
+                        <div class="ui-g-12">
+                            <input type="password" pInputText name="senha" placeholder="Senha" ngModel [required]="true">
+                        </div>
+                        <div class="centralizado">
+                            <a href="#">Esqueceu sua senha?</a>
+                        </div>                       
+                        <div class="ui-g-12">
+                            <button pButton type="submit" class="btn-formulario-login" label="Entrar" [disabled]="frm.invalid"></button>
+                        </div>
                     </div>
-                    <div *ngIf="userForm.get('nome').invalid && (userForm.get('nome').dirty || userForm.get('nome').touched)" class="alert alert-danger">
-                        O Nome é Obrigatório
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control form-control-sm" placeholder="Senha">
-                    </div>
-                    <div class="text-center">
-                        <a href="#">Esqueceu sua senha?</a>
-                    </div>
-                    <hr>
-                    <button class="btn btn-light btn-sm btn-block btn-form" type="submit">
-                        <strong>Entrar</strong>
-                    </button>
-                    <!--<div>
-                        <fieldset>
-                            <legend>Formulario</legend>
-                            Valid: {{frmLogin.txtemail.$valid}}
-                        </fieldset>
-                    </div>
-                    {{email}}-->
                 </form>
             </div>
             <div class="col-md-1"></div>
@@ -40,39 +30,31 @@
                     <strong>Cadastre-se</strong>
                 </h2>
                 <h4> É fácil, rápido e de graça. </h4>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="Nome completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control form-control-sm" placeholder="E-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control form-control-sm" placeholder="Senha" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-10">
-                            <input type="text" class="form-control form-control-sm" placeholder="Endereço" required>
+                <form #forme="ngForm" (ngSubmit)="cadastrar(forme)">
+                    <div class="ui-g">
+                        <div class="ui-g-12 ui-fluid">
+                            <input type="text" pInputText name="nome" placeholder="Nome completo" ngModel [required]="true">
                         </div>
-                        <div class="form-group col-md-2">
-                            <input type="number" class="form-control form-control-sm" placeholder="N°" required>
+                        <div class="ui-g-12 ui-fluid">
+                            <p-inputMask type="text" name="cpf" placeholder="CPF" mask="999.999.999-99" ngModel [required]="true"></p-inputMask>
+                        </div>
+                        <div class="ui-g-12 ui-fluid">
+                            <input type="text" pInputText name="email" placeholder="E-mail" ngModel [required]="true">
+                        </div>
+                        <div class="ui-g-12 ui-fluid">
+                            <input type="password" pInputText name="senha" placeholder="Senha" ngModel [required]="true">
+                        </div>
+                        <div class="ui-g-12 ui-fluid">
+                            <input type="file" pInputText name="foto" ngModel>
+                        </div>
+                        <small class="form-text text-muted pull-lefht">
+                                <i class="fa fa-exclamation-triangle"></i> Nós nunca vamos compartilhar suas informações com ninguém!</small>
+                        <div class="ui-g-12">
+                            <button pButton type="submit" class="btn-formulario-login pull-right" label="Entrar" [disabled]="forme.invalid"></button>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="Bairro" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="Cidade" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="UF" required>
-                    </div>
-                    <small class="form-text text-muted pull-lefht">
-                        <i class="fa fa-exclamation-triangle"></i> Nós nunca vamos compartilhar suas informações com ninguém!</small>
-                    <button class="btn btn-light btn-sm pull-right btn-form" type="submit">
-                        <strong>Cadastrar</strong>
-                    </button>
                 </form>
             </div>
         </div>
     </div>
+</div>
