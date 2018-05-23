@@ -21,4 +21,8 @@ export class LoginComponent implements OnInit {
       'email': new FormControl(this.form.email, [Validators.required, Validators.email])
     });
   }
+
+  logar() { }
+
+  cadastrar() { }
 }
