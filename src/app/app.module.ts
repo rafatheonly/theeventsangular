@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
 import { DataTableModule, ButtonModule, InputTextModule, InputMaskModule, CalendarModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
-import { ROUTES } from './app-routing.module';
+import { AppRoutingModule } from './/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
@@ -35,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(ROUTES),
+    AppRoutingModule,
+    //RouterModule.forRoot(ROUTES),
     FormsModule,
 
     //FormsModule,
