@@ -7,7 +7,8 @@
                 </h2>
                 <h4> Bem-vindo ao seu
                     <em>login</em>. </h4>
-                <form #frm="ngForm" (ngSubmit)="logar(frm)">
+                <!--(ngSubmit)="logar(frm)"-->
+                <form #frm="ngForm">
                     <div class="ui-g ui-fluid">
                         <div class="ui-g-12">
                             <input type="text" pInputText name="email" placeholder="E-mail" ngModel [required]="true">
@@ -30,7 +31,8 @@
                     <strong>Cadastre-se</strong>
                 </h2>
                 <h4> É fácil, rápido e de graça. </h4>
-                <form #forme="ngForm" (ngSubmit)="cadastrar(forme)">
+                <!--(ngSubmit)="cadastrar(forme)"-->
+                <form #forme="ngForm">
                     <div class="ui-g">
                         <div class="ui-g-12 ui-fluid">
                             <input type="text" pInputText name="nome" placeholder="Nome completo" ngModel [required]="true">

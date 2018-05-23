@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  logar() { }
+  //logar() { }
 
-  cadastrar() { }
+  //cadastrar() { }
 }
