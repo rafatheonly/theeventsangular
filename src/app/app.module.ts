@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 //IMPORTACAO USADA P/ A CRIACAO DE ROTAS
 import { RouterModule } from '@angular/router';
 //IMPORTACOES USADAS P/ A VALIDACAO DO FORM S/ O PRIMENG
+import { ReactiveFormsModule } from '@angular/forms';
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //IMPORTACOES USADAS P/ O PRIMENG
@@ -40,12 +41,12 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
 
     //FormsModule,
-    //ReactiveFormsModule,
+    ReactiveFormsModule,
     DataTableModule,
     ButtonModule,
     InputTextModule,
     InputMaskModule,
-    CalendarModule    
+    CalendarModule
   ],
   providers: [
     EventoService

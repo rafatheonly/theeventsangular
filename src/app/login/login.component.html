@@ -6,23 +6,24 @@
                     <strong>Login</strong>
                 </h2>
                 <h4> Bem-vindo ao seu
-                    <em>login</em>. </h4>
-                <!--(ngSubmit)="logar(frm)"-->
-                <form #frm="ngForm">
-                    <div class="ui-g ui-fluid">
-                        <div class="ui-g-12">
-                            <input type="text" pInputText name="email" placeholder="E-mail" ngModel [required]="true">
-                        </div>
-                        <div class="ui-g-12">
-                            <input type="password" pInputText name="senha" placeholder="Senha" ngModel [required]="true">
-                        </div>
-                        <div class="centralizado">
-                            <a href="#">Esqueceu sua senha?</a>
-                        </div>
-                        <div class="ui-g-12">
-                            <button pButton type="submit" class="btn-formulario-login" label="Entrar" [disabled]="frm.invalid"></button>
-                        </div>
+                    <em>login</em>.
+                </h4>
+                <form method="POST" (ngSubmit)="logar()" [formGroup]="formulariologar">
+                    <div class="form-group">                     
+                        <input type="text" class="form-control entrada" placeholder="E-mail" formControlName="email" />
                     </div>
+                    <div class="form-group">                        
+                        <input type="password" class="form-control entrada" placeholder="Senha" formControlName="senha" />
+                        <span *ngIf="formulariologar.get('senha').invalid && (formulariologar.get('senha').dirty ||
+                        formulariologar.get('senha').touched)" class="alerta">
+                            <strong>Atenção!</strong> A senha é obrigatória.
+                        </span>
+                    </div>
+                    <button type="submit" class="btn btn-formularios btn-sm btn-block entrada" [disabled]="formulariologar.invalid">Entrar</button>
+                    <small class="form-text text-muted pull-right">
+                        <a href="#">
+                            <i class="fa fa-lock"></i> Esqueceu sua senha?</a>
+                    </small>
                 </form>
             </div>
             <div class="col-md-1"></div>
@@ -31,30 +32,25 @@
                     <strong>Cadastre-se</strong>
                 </h2>
                 <h4> É fácil, rápido e de graça. </h4>
-                <!--(ngSubmit)="cadastrar(forme)"-->
-                <form #forme="ngForm">
-                    <div class="ui-g">
-                        <div class="ui-g-12 ui-fluid">
-                            <input type="text" pInputText name="nome" placeholder="Nome completo" ngModel [required]="true">
-                        </div>
-                        <div class="ui-g-12 ui-fluid">
-                            <p-inputMask type="text" name="cpf" placeholder="CPF" mask="999.999.999-99" ngModel [required]="true"></p-inputMask>
-                        </div>
-                        <div class="ui-g-12 ui-fluid">
-                            <input type="text" pInputText name="email" placeholder="E-mail" ngModel [required]="true">
-                        </div>
-                        <div class="ui-g-12 ui-fluid">
-                            <input type="password" pInputText name="senha" placeholder="Senha" ngModel [required]="true">
-                        </div>
-                        <div class="ui-g-12 ui-fluid">
-                            <input type="file" pInputText name="foto" ngModel>
-                        </div>
-                        <small class="form-text text-muted pull-lefht">
-                            <i class="fa fa-exclamation-triangle"></i> Nós nunca vamos compartilhar suas informações com ninguém!</small>
-                        <div class="ui-g-12">
-                            <button pButton type="submit" class="btn-formulario-login pull-right" label="Entrar" [disabled]="forme.invalid"></button>
-                        </div>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nome completo">
                     </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="CPF">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Senha">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control" placeholder="Adicione uma foto">
+                    </div>
+                    <small class="form-text text-muted pull-lefht">
+                        <i class="fa fa-exclamation-triangle"></i> Nós nunca vamos compartilhar suas informações com ninguém!</small>
+                    <button type="submit" class="btn btn-formularios btn-sm pull-right">Cadastrar</button>
                 </form>
             </div>
         </div>

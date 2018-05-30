@@ -10,12 +10,6 @@
     color: #fff
 }
 
-.centralizado {
-    text-align: center;
-    margin: 0 auto;
-    padding: 15px 0px 15px 0px
-}
-
 .padding-tela-login {
     position: relative;
     top: 50%;
@@ -24,24 +18,15 @@
 }
 
 .fundo-container form {
-    padding: 0px 0px 40px 0px
+    padding: 15px 0px 50px 0px
 }
 
-/** TROCA A COR DO FOCO DOS INPUTS HTML OU RETIRA TUDO (FOCUS E HOVER) 
+/** TROCA A COR DO FOCO DOS INPUTS HTML OU RETIRA TUDO (FOCUS E HOVER) **/
 
-.ui-inputtext:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-    /**border: 1px solid #ccc !important;
-    box-shadow: 0 0 0 0.2rem rgba(62, 195, 145, .43) !important;
-    outline: none;
+.entrada:focus {
     border-color: rgba(62, 195, 145, 1) !important;
-    box-shadow: 0 0 0 2px rgba(62, 195, 145, .90) !important;
+    box-shadow: 0 0 0 1px rgba(62, 195, 145, .90) !important;
     outline: 0 none !important
-}*/
-
-.ui-inputtext.ui-state-focus, .ui-inputtext:focus {
-    -moz-box-shadow: 0px 0px 5px #1f89ce !important;
-    -webkit-box-shadow: 0px 0px 5px #1f89ce !important;
-    box-shadow: 0px 0px 5px #1b1d1f !important;
 }
 
 .text-muted {
@@ -53,25 +38,21 @@
     color: #ffff00
 }
 
-.btn-formulario-login {
+.btn-formularios {
     border: 1px solid #fff;
     background-color: #fff;
-    color: #000
+    color: #000;
+    font-weight: bold;
+    margin: 10px 0px 10px 0px
 }
 
-.btn-formulario-login:hover {
+.btn-formularios:hover {
     border: 1px solid #3ec391;
     background-color: #3ec391;
     color: #000;
     transition-duration: 0.2s
 }
 
-/** TROCA A COR E ESTILIZA O BTN PRIMENG **/
-
-.ui-widget-header .ui-button:enabled:hover, .ui-widget-header .ui-button:focus, .ui-widget-content .ui-button:enabled:hover, .ui-widget-content .ui-button:focus, .ui-widget.ui-button:enabled:hover, .ui-widget.ui-button:focus, .ui-button:enabled:hover, .ui-button:focus {
-    border: 1px solid #3ec391;
-    background: #3ec391;
-    outline: 0 none;
-    color: #000;
-    transition-duration: 0.2s
+.alerta {
+    color: red;
 }
