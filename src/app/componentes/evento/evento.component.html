@@ -1,0 +1,83 @@
+<div class="my-3 my-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="card" #form="ngForm" (ngSubmit)="register()" novalidate>
+          <div class="card-header">
+            <h3 class="card-title">{{tituloForm}}</h3>
+          </div>
+          <div class="card-body">
+            <div [ngClass]="classCss" role="alert" *ngIf="message">
+              <strong>{{ message.text }}</strong>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputTitulo">Título do evento
+                  <span class="form-required">*</span>
+                </label>
+                <input type="text" class="form-control" id="inputTitulo" name="titulo" [(ngModel)]="evento.titulo" #titulo="ngModel" placeholder="Título do evento"
+                  required />
+                <span class="help-block form-required" *ngIf="titulo.invalid && titulo.dirty">O título do evento é obrigatório!</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputDescricao">Breve descrição do evento
+                  <span class="form-required">*</span>
+                </label>
+                <input type="text" class="form-control" id="inputDescricao" name="descricao" [(ngModel)]="evento.descricao" #descricao="ngModel"
+                  placeholder="Breve descrição do evento" required />
+                <span class="help-block form-required" *ngIf="descricao.invalid && descricao.dirty">A breve descrição do evento é obrigatória!</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputData">Data do evento
+                  <span class="form-required">*</span>
+                </label>
+                <input type="text" class="form-control" id="inputData" name="dataCriacao" [(ngModel)]="evento.data_criacao" #dataCriacao="ngModel"
+                  placeholder="1 jan 2018" required/>
+                <span class="help-block form-required" *ngIf="dataCriacao.invalid && dataCriacao.dirty">A data do evento é obrigatória!</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputLocal">Local onde ocorrerá o evento
+                  <span class="form-required">*</span>
+                </label>
+                <input type="text" class="form-control" id="inputLocal" name="local" [(ngModel)]="evento.local" placeholder="Local onde ocorrerá o evento"
+                  #local="ngModel" required/>
+                <span class="help-block form-required" *ngIf="local.invalid && local.dirty">O local onde ocorrerá o evento é obrigatório!</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputTipoevento">Tipo de Evento                  
+                </label>
+                <select class="form-control custom-select" id="inputTipoevento" name="tipoevento" [(ngModel)]="tipoevento" #tipo="ngModel" required>
+                  <option>Junina</option>
+                  <option>Country</option>
+                </select>
+                <span class="help-block form-required" *ngIf="tipo.invalid && tipo.dirty">O tipo de evento é obrigatório!</span>               
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputImagem">Imagem (foto)
+                  <span class="form-required">*</span>
+                </label>
+                <input type="file" class="form-control-file" id="inputImagem" name="foto" [(ngModel)]="evento.foto" />
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-right">
+            <div class="d-flex">
+              <a href="" class="btn btn-link">Cancel (Limpar)</a>
+              <button type="submit" class="btn btn-primary ml-auto" [disabled]="!form.valid">Cadastrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

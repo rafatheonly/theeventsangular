@@ -1,0 +1,34 @@
+<div class="my-3 my-md-5">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">
+        The Events
+      </h1>
+    </div>
+    <div class="row row-cards row-deck">
+      <div class="col-sm-6 col-xl-3" *ngFor="let evento of eventos">
+        <div class="card">
+          <a (click)="detalhes(evento.id)" style="background-image: url('../../../assets/images/1.jpg')" class="imagem-card">
+          </a>
+          <div class="card-body d-flex flex-column">
+            <h4>
+              <a (click)="detalhes(evento.id)">{{ evento.titulo }}</a>
+            </h4>
+            <p>{{ evento.data_criacao}}</p>
+            <div class="text-muted">{{ evento.descricao }}</div>
+            <div class="d-flex align-items-center pt-5 mt-auto">
+              <div class="avatar avatar-md mr-3" style="background-image: url(./demo/faces/female/7.jpg)"></div>
+              <div>
+                <b>Por:</b>
+                <a href="" class="text-default">
+                  {{ evento.usuario.nome }}</a>
+                <small class="d-block text-muted">3 days ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-rodape></app-rodape>

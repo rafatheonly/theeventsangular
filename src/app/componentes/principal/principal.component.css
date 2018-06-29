@@ -1,0 +1,17 @@
+.imagem-card {
+    max-width: 0 auto;
+    height: 184px;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover
+}
+
+.imagem-card:hover {
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    -o-filter: brightness(70%);
+    -ms-filter: brightness(70%);
+    filter: brightness(70%);
+}

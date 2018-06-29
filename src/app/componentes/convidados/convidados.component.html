@@ -1,0 +1,79 @@
+<div [ngClass]="classCss" role="alert" *ngIf="message">
+  <strong>{{ message.text }}</strong>
+</div>
+<div class="my-3 my-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Convidados ()</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap">
+              <thead>
+                <tr>
+                  <th class="w-1">ID</th>
+                  <th colspan="2">CONVIDADO</th>
+                  <th>RG</th>
+                  <!--<th>EVENTO</th>
+                    <th>USUARIO</th>-->
+                  <th>AÇÕES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let convidado of convidados">
+                  <td>
+                    <span class="text-muted">{{convidado.id}}</span>
+                  </td>
+                  <td class="w-1">
+                    <span class="avatar" style="background-image: url(./demo/faces/male/9.jpg)"></span>
+                  </td>
+                  <td>{{ convidado.nome }}</td>
+                  <td>{{ convidado.rg }}</td>
+                  <td>
+                    {{convidado?.evento?.titulo}}
+                  </td>
+                  <td>
+                    {{convidado?.usuario?.email}}
+                  </td>
+                  <td>
+                    <a class="icon" (click)="edit(usuario.id)">
+                      <i class="fe fe-edit" data-toggle="tooltip" title="Editar"></i>
+                    </a>
+                    <a href="#" class="icon">
+                      <i class="fe fe-x-square" data-toggle="tooltip" title="Desativar"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer text-right">
+            <div class="d-flex">
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" (click)="setPreviousPage($event)" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item" *ngFor="let p of pages; let i=index">
+                    <a class="page-link" [ngClass]="{'pagination-focus':i==page}" (click)="setPage(i,$event)">{{i+1}}</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" (click)="setNextPage($event)" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

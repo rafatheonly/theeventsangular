@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-login mx-auto">
+      <div class="text-center mb-6">
+        <img src="" class="h-6" alt="">
+      </div>
+      <form class="card" #form="ngForm" (ngSubmit)="login()" novalidate>
+        <div style="position: fixed; right: 9%; bottom: 3%" class="alert alert-danger alert-dismissible" *ngIf="message">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <p>teste</p>
+        </div>
+        <div class="alert alert-error" role="alert" *ngIf="message">
+          <strong>Invalid email or password</strong>
+        </div>
+        <div class="card-body p-6">
+          <div class="card-title">Entrar na sua conta!</div>
+          <div class="form-group">
+            <label for="inputEmail" class="form-label">Endereço de e-mail</label>
+            <input type="email" class="form-control" name="email" id="inputEmail" [(ngModel)]="usuario.email" placeholder="E-mail" #email="ngModel"
+              email/>
+            <span class="help-block" *ngIf="email.invalid  && email.dirty">
+              <small>is invalid</small>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="inputSenha" class="form-label">
+              Senha
+              <a href="#" class="float-right small">Esqueceu a senha?</a>
+            </label>
+            <input type="password" class="form-control" name="senha" id="inputSenha" [(ngModel)]="usuario.senha" placeholder="Senha"
+              #senha="ngModel" required/>
+            <span class="help-block" *ngIf="senha.invalid  && senha.dirty">
+              <small>is invalid</small>
+            </span>
+          </div>
+          <div class="form-group">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" />
+              <span class="custom-control-label">Lembrar senha!</span>
+            </label>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid">Entrar</button>
+          </div>
+        </div>
+      </form>
+      <div class="text-center text-muted">
+        Ainda não tem conta?
+        <a href="#">Inscreva-se</a>!
+      </div>
+    </div>
+  </div>
+</div>

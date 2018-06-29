@@ -1,0 +1,68 @@
+<div class="my-3 my-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="card" #form="ngForm" (ngSubmit)="register()" novalidate>
+          <div class="card-header">
+            <h3 class="card-title">{{tituloForm}}</h3>
+          </div>
+          <div class="card-body">
+            <div [ngClass]="classCss" role="alert" *ngIf="message">
+              <strong>{{ message.text }}</strong>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-8">
+                <label for="inputNome">Nome completo
+                  <span class="form-required">*</span>
+                </label>
+                <input type="text" class="form-control" id="inputNome" name="nome" [(ngModel)]="usuario.nome" #nome="ngModel" placeholder="Nome Completo"
+                  required />
+                <span class="help-block" *ngIf="nome.invalid && nome.dirty">Nome completo is required</span>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputRg">RG
+                  <span class="form-required">*</span>
+                </label>
+                <input type="text" class="form-control" id="inputRg" name="rg" [(ngModel)]="usuario.rg" #rg="ngModel" data-mask="0000000000"
+                  data-mask-clearifnotmatch="true" placeholder="0000000000" />
+                <span class="help-block" *ngIf="rg.invalid && rg.dirty">RG is required</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail">E-mail
+                  <span class="form-required">*</span>
+                </label>
+                <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="usuario.email" placeholder="E-mail" #email="ngModel"
+                  email/>
+                <span class="help-block" *ngIf="email.invalid && email.dirty">E-mail is required</span>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputSenha">Senha
+                  <span class="form-required">*</span>
+                </label>
+                <input type="password" class="form-control" id="inputSenha" name="senha" [(ngModel)]="usuario.senha" placeholder="Senha"
+                  #senha="ngModel" required />
+                <span class="help-block" *ngIf="senha.invalid && senha.dirty">Senha is required</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputImagem">Imagem (foto)
+                  <span class="form-required">*</span>
+                </label>
+                <input type="file" class="form-control-file" id="inputImagem" name="foto" [(ngModel)]="usuario.foto">
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-right">
+            <div class="d-flex">
+              <a href="" class="btn btn-link">Cancel (Limpar)</a>
+              <button type="submit" class="btn btn-primary ml-auto" [disabled]="!form.valid">Cadastrar-se</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

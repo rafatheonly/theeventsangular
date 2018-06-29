@@ -1,0 +1,1 @@
+export const THE_EVENTS_API: string = 'https://theeventsapi.herokuapp.com';

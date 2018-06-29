@@ -1,0 +1,95 @@
+<div class="header py-4">
+  <div class="container">
+    <div class="d-flex">
+      <a class="header-brand" href="./index.html">
+        <img src="../../../assets/images/logo.png" class="header-brand-img" alt="the events - mr logo">
+      </a>
+      <div class="d-flex order-lg-2 ml-auto" *ngIf="shared.usuario.perfil == 'ADMIN' || shared.usuario.perfil == 'USUARIO'">
+        <div class="dropdown">
+          <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+            <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
+            <span class="ml-2 d-none d-lg-block">
+              <span class="text-default">{{ shared.usuario.nome }}</span>
+              <small class="text-muted d-block mt-1" *ngIf="shared.usuario.perfil == 'ADMIN'">Administrador</small>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+            <a href="#" class="dropdown-item">
+              <i class="dropdown-icon fe fe-user"></i> Perfil
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-settings"></i> Configurações
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-send"></i> Menssagens
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="" class="dropdown-item" (click)="signOut()">
+              <i class="dropdown-icon fe fe-log-out"></i> Sair
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+        <span class="header-toggler-icon"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-3 ml-auto">
+        <form class="input-icon my-3 my-lg-0">
+          <input type="search" class="form-control header-search" placeholder="Procurar evento&hellip;" tabindex="1">
+          <div class="input-icon-addon">
+            <i class="fe fe-search"></i>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg order-lg-first">
+        <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+          <li class="nav-item">
+            <a [routerLink]="['']" class="nav-link active">
+              <i class="fe fe-home"></i> Home</a>
+          </li>
+          <li class="nav-item" *ngIf="shared.usuario.perfil == 'ADMIN'">
+            <a href="" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-edit-3"></i> Cadastros</a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a [routerLink]="['/usuario']" class="dropdown-item ">Usuários</a>
+              <a [routerLink]="['/evento']" class="dropdown-item ">Eventos</a>
+              <a href="" class="dropdown-item ">Tipos de eventos</a>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="shared.usuario.perfil == 'ADMIN'">
+            <a href="" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-file-text"></i> Listagens</a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a [routerLink]="['/usuarios']" class="dropdown-item ">Usuários</a>
+              <a [routerLink]="['/eventos']" class="dropdown-item ">Eventos</a>
+              <a href="" class="dropdown-item ">Tipos de eventos</a>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="shared.usuario.perfil == 'ADMIN'">
+            <a href="" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-pie-chart"></i> Gráficos</a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="" class="dropdown-item ">Usuários</a>
+              <a href="http://localhost:8080/eventos/exportevento" class="dropdown-item ">Eventos</a>
+              <a href="" class="dropdown-item ">Tipos de eventos</a>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="shared.usuario.perfil != 'ADMIN'">
+            <a [routerLink]="['/usuario']" class="nav-link">
+              <i class="fe fe-user"></i> Cadastrar-se</a>
+          </li>
+          <li class="nav-item" *ngIf="shared.usuario.perfil != 'ADMIN'">
+            <a [routerLink]="['/login']" class="nav-link">
+              <i class="fe fe-lock"></i> Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
