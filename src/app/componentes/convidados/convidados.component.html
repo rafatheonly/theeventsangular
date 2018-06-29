@@ -16,8 +16,8 @@
                   <th class="w-1">ID</th>
                   <th colspan="2">CONVIDADO</th>
                   <th>RG</th>
-                  <!--<th>EVENTO</th>
-                    <th>USUARIO</th>-->
+                  <th>EVENTO</th>
+                  <th>USUARIO</th>
                   <th>AÇÕES</th>
                 </tr>
               </thead>
@@ -54,16 +54,16 @@
               <nav>
                 <ul class="pagination">
                   <li class="page-item">
-                    <a class="page-link" (click)="setPreviousPage($event)" aria-label="Previous">
+                    <a class="page-link" href="" aria-label="Previous">
                       <span aria-hidden="true">&laquo;</span>
                       <span class="sr-only">Previous</span>
                     </a>
                   </li>
-                  <li class="page-item" *ngFor="let p of pages; let i=index">
-                    <a class="page-link" [ngClass]="{'pagination-focus':i==page}" (click)="setPage(i,$event)">{{i+1}}</a>
+                  <li class="page-item">
+                    <a class="page-link" href="">1</a>
                   </li>
                   <li class="page-item">
-                    <a class="page-link" (click)="setNextPage($event)" aria-label="Next">
+                    <a class="page-link" href="" aria-label="Next">
                       <span aria-hidden="true">&raquo;</span>
                       <span class="sr-only">Next</span>
                     </a>
